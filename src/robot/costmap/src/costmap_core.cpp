@@ -3,6 +3,6 @@
 namespace robot
 {
 
-CostmapCore::CostmapCore(const rclcpp::Logger& logger) : logger_(logger) {}
+  CostmapCore::CostmapCore(const rclcpp::Logger& logger) : logger_(logger) {}
 
 }
