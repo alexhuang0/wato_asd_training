@@ -12,12 +12,14 @@ class CostmapNode : public rclcpp::Node {
     
     // Place callback function here
     void publishMessage();
+    void lidar_callback(const sensor_msgs::msg::LaserScan& sensorMsg) const();
  
   private:
     robot::CostmapCore costmap_;
     // Place these constructs here
     rclcpp::Publisher<std_msgs::msg::String>::SharedPtr string_pub_;
     rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr subscription_;
 };
  
 #endif 
